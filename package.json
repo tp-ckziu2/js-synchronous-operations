@@ -1,0 +1,13 @@
+{
+	"name": "zadania",
+	"version": "1.0.0",
+	"description": "Testy zadań programistycznych",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^29.7.0"
+	},
+	"type": "module"
+}

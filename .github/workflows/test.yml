@@ -1,0 +1,28 @@
+name: Test zadań
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repozytorium
+              uses: actions/checkout@v3
+
+            - name: Instalacja Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
+            - name: Instalacja zależności
+              run: npm install
+
+            - name: Uruchamianie testów
+              run: npm test
